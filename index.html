@@ -4,22 +4,27 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
+   <style>
+      #box{
+         height: 100px;
+         width: 100px;
+         background-color: blueviolet;
+
+      }
+   </style>
 </head>
 <body>
 
-   <button id="btn">CLick Me !</button>
+   <div id="box" ondblclick="fun()" >
 
-
+   </div>
+   
    <script>
+      window.addEventListener('keydown',checkKey);
 
-      function btnclick(){
-         alert("Button was Clicked!")
+      function checkKey(event){
+         console.log(event.key);
       }
-
-      let btn = document.getElementById("btn");
-
-      btn.addEventListener("click", btnclick)
-
    </script>
    
 </body>
