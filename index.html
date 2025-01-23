@@ -5,26 +5,36 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
    <style>
-      #box{
-         height: 100px;
-         width: 100px;
-         background-color: blueviolet;
-
-      }
+ 
    </style>
 </head>
 <body>
 
-   <div id="box" ondblclick="fun()" >
+   <button id="btn1">Button 1</button>
+   <button id="btn2">Button 2</button>
+   <button id="btn3">Button 3</button>
 
-   </div>
-   
+
+
    <script>
-      window.addEventListener('keydown',checkKey);
+      let b1 = document.getElementById("btn1");
+      let b2 = document.getElementById("btn2");
+      let b3 = document.getElementById("btn3");
 
-      function checkKey(event){
-         console.log(event.key);
-      }
+      let features = ("height:600, width:600");
+      let box;
+      b1.addEventListener("click",()=>{
+         box = window.open("https://google.com","Google",features);
+      })
+
+      b2.addEventListener('click',()=>{
+         box.close()
+      })
+
+      b3.addEventListener('click',()=>{
+         window.open()
+      })
+
    </script>
    
 </body>
